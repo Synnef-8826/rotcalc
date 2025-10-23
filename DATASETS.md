@@ -28,8 +28,8 @@ An example dataset (`data/datasets/Cheesecake.json`) is provided in the repo.
    
      - Must be `1-multiplier`, for example, a 5% SB is represented as `0.05`
      
-   - `avgTime`: average time taken to complete the heist while meeting the previous criteria
+   - `avgTime`: average time taken to complete the heist while meeting the previous criteria. Measured in seconds
    
-   - `bestTime`: lowest time ever obtained for the heist. Used for displaying average and best possible times in generated rotations
+   - `bestTime`: lowest time ever obtained for the heist. Used for displaying average and best possible times in generated rotations. Measured in seconds
    
    - `gagePacks`: each Gage package adds +0.5% to the cumulative XP bonuses (read [Reputation](https://payday.fandom.com/wiki/Reputation_(Payday_2)#Factors_affecting_earned_XP) page on the game's wiki), this option is available to account for that but can be safely set to `0` in the majority of cases.
