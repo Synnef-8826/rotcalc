@@ -1,0 +1,108 @@
+{
+    "rotationData":  {
+        "name": "Cheesecake",
+        "description": "Current WR rotation for Infamy Co-op",
+        "players": 4
+    },
+    "heists": [
+        {
+            "id": "ds0_14",
+            "prettyName": "Diamond Store 0 (14 bags)",
+            "xp": 2000,
+            "xpPerBag": 1000,
+            "bagsCollected": 14,
+            "stealthBonus": 0.05,
+            "avgTime": 55,
+            "bestTime": 51,
+            "gagePacks": 0
+        },
+        {
+            "id": "hcat",
+            "prettyName": "Hyper Cat",
+            "xp": 23500,
+            "xpPerBag": 500,
+            "bagsCollected": 21,
+            "stealthBonus": 0.15,
+            "avgTime": 110,
+            "bestTime": 110,
+            "gagePacks": 0
+        },
+        {
+            "id": "ds14",
+            "prettyName": "Diamond Store (14 bags)",
+            "xp": 2000,
+            "xpPerBag": 1000,
+            "bagsCollected": 14,
+            "stealthBonus": 0.05,
+            "avgTime": 45,
+            "bestTime": 40,
+            "gagePacks": 0
+        },
+        {
+            "id": "ds18",
+            "prettyName": "Diamond Store (all bags)",
+            "xp": 2000,
+            "xpPerBag": 1000,
+            "bagsCollected": 18,
+            "stealthBonus": 0.05,
+            "avgTime": 50,
+            "bestTime": 50,
+            "gagePacks": 0
+        },
+        {
+            "id": "ed",
+            "prettyName": "Election Day",
+            "xp": 20000,
+            "xpPerBag": 500,
+            "bagsCollected": 18,
+            "stealthBonus": 0.2,
+            "avgTime": 120,
+            "bestTime": 120,
+            "gagePacks": 0
+        },
+        {
+            "id": "fwb",
+            "prettyName": "First World Bank",
+            "xp": 48000,
+            "xpPerBag": 1000,
+            "bagsCollected": 14,
+            "stealthBonus": 0,
+            "avgTime": 130,
+            "bestTime": 130,
+            "gagePacks": 0
+        },
+        {
+            "id": "ggc",
+            "prettyName": "Golden Grin Casino",
+            "xp": 48000,
+            "xpPerBag": 500,
+            "bagsCollected": 3,
+            "stealthBonus": 0,
+            "avgTime": 140,
+            "bestTime": 135,
+            "gagePacks": 0
+        },
+        {
+            "id": "ht",
+            "prettyName": "Hostile Takeover",
+            "xp": 22000,
+            "xpPerBag": 500,
+            "bagsCollected": 3,
+            "stealthBonus": 0.15,
+            "avgTime": 70,
+            "bestTime": 67,
+            "gagePacks": 0
+        },
+        {
+            "id": "mm",
+            "prettyName": "Mountain Master",
+            "xp": 41500,
+            "xpPerBag": 500,
+            "bagsCollected": 5,
+            "stealthBonus": 0,
+            "avgTime": 115,
+            "bestTime": 115,
+            "gagePacks": 0
+        }
+    ]
+}
