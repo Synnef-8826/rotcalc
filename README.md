@@ -28,5 +28,4 @@ A simple python script to generate [PAYDAY 2](https://www.paydaythegame.com/payd
 - `pip install tqdm`
 - Activate the venv when using. If the demand is there I'll make and package a separate version without any external dependencies.
 
-## Datasets format
-See DATASETS.md (TODO)
+## [Heist dataset formatting](https://github.com/Synnef-8826/rotcalc/blob/main/DATASETS.md)
