@@ -1,7 +1,7 @@
 # NOTICE
 There are some individuals that have repeatedly attempted to claim PAYDAY 2's speedrunning community's achievements and innovations as theirs for their own community's benefit. **While this project's license allows for private use of the licensed software, be aware that anyone claiming it as theirs without providing credit to THIS repository nor performing any changes to the original project is being dishonest.**
 
-Thank you for reading and your understanding. If the people this notice is referring to are reading this, which I know you are, this is a project for the entire community, so we appreciate that you spread the voice so we all benefit from it.
+Thank you for reading and your understanding. If the people this notice are referring to are reading this, which I know you are, this is a project for the entire community, so we appreciate that you spread the voice so we all benefit from it.
 
 Making this notice is my decision and my decision alone.
 
