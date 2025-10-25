@@ -33,3 +33,6 @@ An example dataset (`data/datasets/Cheesecake.json`) is provided in the repo.
    - `bestTime`: lowest time ever obtained for the heist. Used for displaying average and best possible times in generated rotations. Measured in seconds
    
    - `gagePacks`: each Gage package adds +0.5% to the cumulative XP bonuses (read [Reputation](https://payday.fandom.com/wiki/Reputation_(Payday_2)#Factors_affecting_earned_XP) page on the game's wiki), this option is available to account for that but can be safely set to `0` in the majority of cases.
+
+# Additional information
+- A `ds0_14` heist entry must exist since RotCalc is currently hardcoded to start rotations with that heist, since it's the most optimal for infamy rotations
