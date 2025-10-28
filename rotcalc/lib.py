@@ -1,6 +1,5 @@
 import csv, json, os
 
-# TODO: make crew alive bonus dependent on the number of players to allow datasets for solo/duo/trio rotations
 def getHeistXp(heistData, rotationData, stealthBoost):
     return ((heistData["xp"] + (heistData["bagsCollected"] * heistData["xpPerBag"])) * (1 + 0.45 + 2.05 + (0.03 * (2*rotationData["players"])) + (0.1*(rotationData["players"]-1)) + (0.005 * heistData["gagePacks"]))) * (stealthBoost+1) * 15
 
@@ -32,11 +31,11 @@ def loadDefaults():
         file.write("{}")
 
     for setting in [
-        ["dataset", os.listdir("data/datasets")[0].replace(".csv","")],
+        ["dataset", os.listdir("data/datasets")[0]],
         ["amount", 100000],
         ["heistCount", 10],
         ["allowPenalties", False],
-        ["goal", "xp"],
+        ["goal", "time"],
         ["loadTime", 0]
         ]:
         changeSetting(setting[0], setting[1])

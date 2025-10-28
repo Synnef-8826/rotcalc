@@ -1,8 +1,9 @@
 {
     "rotationData":  {
         "name": "Cheesecake",
-        "description": "Current WR rotation for Infamy Co-op",
-        "players": 4
+        "description": "Current WR heists for Infamy Co-op",
+        "players": 4,
+        "initialHeist": "ds0_14"
     },
     "heists": [
         {

@@ -8,8 +8,8 @@ argList = [ # short,long,desc,type,options?
         ["-o", "--output", "send all output to file OUTPUT", "store"],
         ["-s", "--settings", "print current settings", "store_true"],
 
-        ["-d", "--dataset", "change the active dataset (must be a csv name in ./data/datasets, e.g 'Cheesecake')", "store"],
-        ["-a", "--amount", "set amount of rotations to generate, ~100000 recommended", "store"],
+        ["-d", "--dataset", "change the active dataset (must be a filename in ./data/datasets, e.g 'Cheesecake.json')", "store"],
+        ["-a", "--amount", "set amount of rotations to generate", "store"],
         ["-c", "--count", "set length of generated rotations, 9/10 recommended for infamy", "store"],
         ["-p", "--penalty", "toggles generating rotations that don't prevent heat penalties'", "store_true"],
         ["-g", "--goal", "change criteria for selecting best rotations", "store", ["xp", "time"]],
@@ -62,5 +62,5 @@ if args.settings:
 
 # --- Run arguments ---
 if args.run:
-        from calculator import generateRotations
+        from calculator import generateRotations, plotRotation
         generateRotations(lib.getSettings()["amount"], lib.getSettings()["heistCount"], not lib.getSettings()["allowPenalties"], lib.getSettings()["loadTime"], lib.getSettings()["goal"], args.output)
