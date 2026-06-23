@@ -1,5 +1,5 @@
-from lib import getHeistXp, getSettings
-import copy, time, tqdm, math, random, sys, json
+from lib import getHeistXp, getSettings, getCurrentLevel, getCurrentLevel
+import copy, time, tqdm, math, random, sys, json, os
 from datetime import datetime, timedelta
 from tqdm import tqdm
 
@@ -59,6 +59,8 @@ def plotRotation(heistList, printDetails):
     timeAvg = 0
     timeBest = 0
     stealthBoost = 0
+
+    level = getCurrentLevel(xp)["current"]
 
     i = 0
     for heist in heistList:
@@ -165,3 +167,32 @@ def generateRotations(amount, heistCount, preventPenalties, loadTime, goal, dump
             xp.append(summary["xp"])
 
     printResults(scannedRotations, xp, timesAvg, timesBest, goal, loadTime, dumpFile) # Print the best found rotation based on goal argument
+
+
+ # Mode for manually calculating rotations
+def manualPlotting():
+    xp = 0
+    timeAvg = 0
+    timeBest = 0
+    stealthBoost = 0
+
+    print("You are now in manual mode.\nNOTE: This mode DOES NOT perform any logic checks and can generate incoherent rotations. Use responsibly!\n")
+
+    while True:
+        levelData = getCurrentLevel(xp)
+
+        if getSettings()["goal"] == "time":
+            print(f"You are currently level {levelData["current"]} (~{levelData["nextRemaining"] * 100}% filled) ({xp})\nSkill points: {levelData["skillPoints"]}")
+        elif getSettings()["goal"] == "xp":
+            print(f"Total XP earned: {math.trunc(xp)}")
+
+        print(f"Current run time: {timedelta(seconds=timeAvg)} avg, {timedelta(seconds=timeBest)} best\nStealth bonus from previous heist: x{stealthBoost + 1}\nInput a valid heist ID from the curent dataset. Available heists:")
+        for heist in heists: print(heist["id"])
+
+        sel = input("(Input nothing to quit)\n")
+        if sel == "" or sel == "exit": exit(0)
+
+        xp += heistXpTable[sel] * (stealthBoost+1)
+        stealthBoost = heistsTable[sel]["stealthBonus"]
+        timeAvg += heistsTable[sel]["avgTime"]
+        timeBest += heistsTable[sel]["bestTime"]
