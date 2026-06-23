@@ -11,6 +11,8 @@ An example dataset (`data/datasets/Cheesecake.json`) is provided in the repo.
   
   - `players`: number of players from the run the dataset is derived from. Used for calculating extra XP from the Crew Alive bonus and Team Boosts equipped on weapons
       - WARNING: 2 Team Boosts per player is assumed, if your needs are different (like the need for Concealment boosts) let me know!
+
+  - `initialHeist`: the rotation's initial heist, must be the `id` of an entry in `heists`
         
 - `heists`: array of every heist in the dataset. Each heist is composed of:
 
@@ -18,21 +20,14 @@ An example dataset (`data/datasets/Cheesecake.json`) is provided in the repo.
    
    - `prettyName`: heist name used in output
    
-   - `xp`: base XP reward from the heist, including all objectives and excluding all bag pickups
-   
-   - `xpPerBag`: XP per collected bag. For heists with multiple loot types that each give different XP the average value per bag must be used
-   
-   - `bagsCollected`: amount of secured bags
+   - `xp`: final base XP reward from the heist, including all objectives and secured bags
    
    - `stealthBonus`: stealth bonus given by the heist that will carry over to the next mission
    
-     - Must be `1-multiplier`, for example, a 5% SB is represented as `0.05`
+     - Must be `multiplier-1`, for example, a 5% SB is represented as `1.05 - 1 = 0.05`
      
    - `avgTime`: average time taken to complete the heist while meeting the previous criteria. Measured in seconds
    
    - `bestTime`: lowest time ever obtained for the heist. Used for displaying average and best possible times in generated rotations. Measured in seconds
    
    - `gagePacks`: each Gage package adds +0.5% to the cumulative XP bonuses (read [Reputation](https://payday.fandom.com/wiki/Reputation_(Payday_2)#Factors_affecting_earned_XP) page on the game's wiki), this option is available to account for that but can be safely set to `0` in the majority of cases.
-
-# Additional information
-- A `ds0_14` heist entry must exist since RotCalc is currently hardcoded to start rotations with that heist, since it's the most optimal for infamy rotations
