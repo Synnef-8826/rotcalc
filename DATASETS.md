@@ -19,6 +19,8 @@ An example dataset (`data/datasets/Cheesecake.json`) is provided in the repo.
    - `id`: heist name used internally. Only requirement is being a valid key in Python dictionaries, avoid spaces and anything that isn't a-z, A-Z, 0-9, `-` and `_`.
    
    - `prettyName`: heist name used in output
+
+   - `difficulty`: the difficulty of the heist represented as a number from 0-6, 0 being Normal and 6 being Death Sentence
    
    - `xp`: final base XP reward from the heist, including all objectives and secured bags
    
